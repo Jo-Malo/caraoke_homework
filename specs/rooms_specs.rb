@@ -13,14 +13,16 @@ class TestRooms < MiniTest::Test
     @rooms.add_guest(@guests)
 
     @song1 = Songs.new("Girls on Film", "Peter")
+    @song2 = Songs.new("Toto", "Who cares")
+    @rooms.add_song_to_room(@song1)
   end
 
   def test_room_name
     assert_equal("Mandalay", @rooms.name)
   end
 
-  def test_room_capacity_empty
-    assert_equal([@guests], @rooms.room_capacity_empty)
+  def test_room_capacity
+    assert_equal([@guests], @rooms.room_capacity)
   end
 
   def test_check_in_guest
@@ -33,9 +35,13 @@ class TestRooms < MiniTest::Test
     assert_equal(0, @rooms.capacity.length)
   end
 
+  def test_check_song_playlist
+    assert_equal(1, @rooms.songs.length)
+  end
+
   def test_add_song_to_room
     @rooms.add_song_to_room(@song1)
-    assert_equal(1, @rooms.songs.length)
+    assert_equal(2, @rooms.songs.length)
   end
 
 end

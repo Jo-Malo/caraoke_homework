@@ -12,7 +12,7 @@ class Rooms
     return @rooms
   end
 
-  def room_capacity_empty
+  def room_capacity
     return @capacity
   end
 
@@ -26,6 +26,10 @@ class Rooms
 
   def check_out_guest(guest)
     @capacity.delete(guest)
+  end
+
+  def check_song_playlist
+    return @songs
   end
 
   def add_song_to_room(song)
