@@ -20,7 +20,7 @@ class Rooms
   end
 
   # def check_out_guest(guest)
-  #   capcity.pop
+  #   capcity.delete
   # end
 
 end
