@@ -1,11 +1,11 @@
-require 'pry'
 class Rooms
 
-  attr_reader :name, :capacity
+  attr_reader :name, :capacity, :songs
 
   def initialize(name)
     @name = "Mandalay"
     @capacity = []
+    @songs = []
   end
 
   def room_name
@@ -28,5 +28,8 @@ class Rooms
     @capacity.delete(guest)
   end
 
+  def add_song_to_room(song)
+    @songs.push(song)
+  end
 
 end
