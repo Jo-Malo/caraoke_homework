@@ -1,11 +1,14 @@
 class Rooms
 
-  attr_reader :name, :capacity, :songs
+  attr_reader :name, :capacity, :maxhold, :till, :songs, :entry_fee
 
-  def initialize(name)
+  def initialize(name, maxhold, till)
     @name = "Mandalay"
+    @maxhold = maxhold
+    @till = till
     @capacity = []
     @songs = []
+    @entry_fee = 5
   end
 
   def room_name
@@ -40,12 +43,22 @@ class Rooms
     @songs.delete(song)
   end
 
+# below dunno what this is doing
   def too_many_guests(capacity)
   if capacity <=> 4
     p "full"
   else
     p "spaces here"
   end
+end
+
+# capacity should be rewritten an integer 
+def room_has_maxhold
+  return @maxhold
+end
+
+def add_to_till(money)
+  @till += money
 end
 
 end
