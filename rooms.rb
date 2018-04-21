@@ -36,11 +36,15 @@ class Rooms
     @songs.push(song)
   end
 
+  def remove_song_from_room(song)
+    @songs.delete(song)
+  end
+
   def too_many_guests(capacity)
   if capacity <=> 4
-    return false
+    p "full"
   else
-    return true
+    p "spaces here"
   end
 end
 
