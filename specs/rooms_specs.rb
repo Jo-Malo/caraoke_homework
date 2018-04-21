@@ -15,7 +15,7 @@ class TestRooms < MiniTest::Test
     @song1 = Songs.new("Girls on Film", "Peter")
     @song2 = Songs.new("Toto", "Who cares")
     @rooms.add_song_to_room(@song1)
-    #not very well organised - would prefer to hold 
+    #not very well organised - would prefer to hold capacity & playlist within @rooms 
   end
 
   def test_room_name
