@@ -36,4 +36,12 @@ class Rooms
     @songs.push(song)
   end
 
+  def too_many_guests(capacity)
+  if capacity <=> 4
+    return false
+  else
+    return true
+  end
+end
+
 end
