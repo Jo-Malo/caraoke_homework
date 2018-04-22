@@ -15,7 +15,7 @@ class TestRooms < MiniTest::Test
     @song1 = Songs.new("Girls on Film", "Peter")
     @song2 = Songs.new("Toto", "Who cares")
     @rooms.add_song_to_room(@song1)
-    #not very well organised - would prefer to hold capacity & playlist within @rooms 
+    #not very well organised - would prefer to hold capacity & playlist within @rooms
   end
 
   def test_room_name
@@ -57,6 +57,10 @@ class TestRooms < MiniTest::Test
 
   def test_room_has_maxhold
     assert_equal(3, @rooms.maxhold)
+  end
+
+  def test_entry_fee
+    assert_equal(5, @rooms.entry_fee)
   end
 
   def test_add_to_till
